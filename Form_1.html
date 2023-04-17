@@ -1,0 +1,105 @@
+<!Doctype html>
+<html>
+<head>
+  <title>Exp3</title>
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+<form name="f1" onsubmit="fun()">
+<div class="form"><center>
+
+                      <fieldset>
+                          <legend>Form To Enter Your Details</legend>
+                          Name: <input type="text" placeholder="Enter your name" required id="fname" name="fname" pattern=[a-zA-Z]{3,} AUTOFOCUS><br><br>
+                          Phone number: <input type="text" placeholder="Enter your phone number" name="ph" pattern=[0-9]{10}><br><br>
+                          Date Of Birth: <input type="date" placeholder="Enter your date of birth" name="dob" required><br><br>
+                          Age: <input type="Number" placeholder="Enter your age" name="age" maxlength="3" required><br><br>
+                          Registration Number: <input type="text" placeholder="Enter your Register No " name="reg" ><br><br>
+
+
+
+
+                          Gender:<input type="radio" id="m" name="gender" value="Male"><label>Male</label>
+                          <input type="radio" id="f" name="gender" value="Female"><label>Female</label><br><br>
+
+                          <br>
+                          Address:<br /><textarea name="Address" rows="5" cols="50" placeholder="Enter your address" name="address" required></textarea><br><br>
+
+                          
+                          Email <input type="email" placeholder="Enter The Kongu Mail" name="mail"><br><br>
+                          <center>
+                              <input type="checkbox" id="dec" name="dec">The Above mentioned Details Is Declared By Me<br><br>
+                              <br><br><input type="button" value="Submit" onclick="fun()">
+                          </center>
+
+</form></center>
+    <script>
+ function fun() {
+ var fname = document.forms[0]["fname"].value;
+ var agee = document.forms[0]["age"].value;
+ var dob = document.forms[0]["dob"].value;
+ var maill = document.forms[0]["mail"].value;
+ var phn=document.forms[0]["ph"].value;
+ 
+ var gm=document.f1.m.value;
+   var gf=document.f1.f.value;
+   var d=document.f1.dec.value;
+   
+
+ if (fname == "") {
+ alert("Name must be filled out");
+ return false;
+ }
+
+ 
+ if(phn.length<10 || phn.length>10){
+  alert("Phone number should be of 10 digits");
+ return false;
+ }
+ if (dob == "") {
+     alert("Date Of Birth must be filled out");
+     return false;
+ }
+
+
+ if(agee==""){
+  alert("Age must be filled out");
+  return false;
+ }
+
+ if(document.f1.m.checked==0 && document.f1.f.checked==0){
+  alert("Gender must be selected");
+  return false;
+ }
+
+
+
+ 
+ if (maill == "") {
+ alert("Mail must be filled out");
+ return false;
+ }
+
+ if(document.getElementById('dec').checked != true) {   
+         alert("Click The Declaration Button ");   
+}
+
+
+ 
+ alert("Registration Successful!");
+
+ }
+    </script></body><style>
+   
+    .form{
+        background-image: url(https://a.storyblok.com/f/93956/2100x1181/df37a68569/header_image.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 150%;
+        margin: auto;
+        padding: 50px;
+        color:white;
+    }
+</style>
+
+</html>

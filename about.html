@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title >HEY SUGAR</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<body>
+        <center>
+            <br><button onclick="myFunction()">Click This</button> 
+            <button  onmouseover="mouseover()">Click me</button> <p id="demo"></p><br>
+            NAME: <input type="text" onfocus="myFunction2(this)" placeholder="Enter Your Name"><br>
+            <p id="demo"></p>
+            <form onsubmit="submit()"> Email: <input type="text" required  placeholder="Enter Your Email Id"><br><br>
+                 Phone Number:  <input type="text" required placeholder="Enter Your Phone Number"> 
+                <br><br> <input type="submit" value="submit"> </form></center>
+                <br><br><br><br><br><br><br><br><br><br><br><br><p>Seconds you have spent viewing this page so far:
+
+                    <span id="soFar">6</span>
+
+
+    
+    </body> 
+    <script type="text/javascript">
+
+    function myFunction()
+    { 
+        alert("Welcome To Hey Sugar");
+    }
+    function mouseover()
+    {
+    document.getElementById("demo").innerHTML="<br> Hey Sugar!!<br>Playful bakery and cafe located in downtown Geneva,<br> Illinois, featuring whimsical cupcakes, soft-serve ice cream, lemonades, hot chocolate, english toffee, ...";
+    }
+
+    function submit()
+    { 
+        alert("This is using onsubmit event");
+    }
+
+    function myFunction2(x)
+     {
+
+    x.style.background="red"; document.getElementById("demo").innerHTML="When the input field gets focus, a function changes the background color..."
+     
+    }
+
+    function Load()
+    { 
+        alert("Page is loaded");
+    }
+
+    var seconds = 0;
+	function startTimer()
+	{
+		window.setInterval( "updateTime()", 1000 );
+	} 
+
+
+	function updateTime()
+	{
+		 ++seconds;
+		document.getElementById( "soFar" ).innerHTML = seconds;
+	 } 
+window.addEventListener( "load", startTimer, false );
+
+   
+</script>
+
+
+
+ <style>
+    body{
+        background-image: url(file:///C:/Users/prade/Downloads/New%20Project.jpg);
+        background-repeat: no-repeat;
+        color: white;
+        background-size: 100% 700px;
+    }
+    .txt1{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button{
+        border-radius: 12px;
+    }
+    button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #ff001e; /* Green */
+  color: white;
+}
+ </style>   
